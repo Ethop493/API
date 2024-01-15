@@ -35,7 +35,7 @@ def main():
         print("\n")
 
         if more == "y":
-
+            #adds information such as what the weather is like tomorrow, and includes the mac and min temperature in celsius
             print(f"\nHere's what the weather forecast for {location} is looking like tomorrow:")
             print("It will be",
                   str(forecastData["forecast"]["forecastday"][0]["day"]["condition"]["text"]),
