@@ -26,11 +26,11 @@ def main():
     forecastData = p.json()
 
     if a.status_code == 200:
-
+        #Provides the initial information to the user in a clear format
         print("It is", locationData['current']['condition']['text'], "as of", locationData['current']['last_updated'])
 
         print("\n")
-
+        #Asks user if they would like further information
         more = input(f"\nAre you interested in knowing more on {location}'s forecast? (y or n): ")
         print("\n")
 
@@ -58,7 +58,7 @@ def main():
     else:
         print("Oops! We can't find any forecast data for the location", location, "." "Please try again...\n")
         main()
-
+        #code above is a failsafe incase there is no data on the location available through the API
 
 def again():
     again = input("\nWould you like to search the WeatherAPI again? (y or n): ")
